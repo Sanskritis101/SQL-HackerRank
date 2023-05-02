@@ -9,7 +9,9 @@ Not A Triangle: The given values of A, B, and C don't form a triangle.
 Input Format
 
 The TRIANGLES table is described as follows:
+
 ![image](https://user-images.githubusercontent.com/104347305/235743862-961af14c-479f-4ebd-9bd8-aabdfd26d812.png)
+
 
 Each row in the table denotes the lengths of each of a triangle's three sides.
 
