@@ -140,4 +140,10 @@ Your results must be in the form:
 
 where *lat* is the sum of all values in LAT_N and *lon* is the sum of all values in LONG_W. Both results must be rounded to a scale of  decimal places.
 
+**Solution:**
+```MySQL
+```
+
+### [
+
 
