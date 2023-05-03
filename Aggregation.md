@@ -25,3 +25,36 @@ The CITY table is described as follows:
 ```MySQL
 SELECT SUM(population) FROM CITY WHERE COUNTRYCODE = "JPN";
 ```
+
+### [Population Density Difference](https://www.hackerrank.com/challenges/population-density-difference/problem)
+
+Query the difference between the maximum and minimum populations in CITY.
+
+**Input Format**
+
+The CITY table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235844936-6db853d5-858d-44cb-9794-c7869c5b04b3.png)
+
+**Solution:**
+```MySQL
+SELECT (MAX(POPULATION)-MIN(POPULATION)) FROM CITY;
+```
+
+### [The Blunder](www.hackerrank.com/challenges/the-blunder/problem)
+amantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
+
+Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
+
+**Input Format**
+
+The EMPLOYEES table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235845469-c419777b-7dbb-45ee-b90d-2b67401e72d8.png)
+
+Note: Salary is per month.
+
+**Constraints**
+```  1000 < Salary <10⁵  ```
+
+
