@@ -83,9 +83,10 @@ Sample Input
 
 Sample Output
 
-``` Jenny    Ashley     Meera  Jane
+``` 
+Jenny    Ashley     Meera  Jane
 Samantha Christeen  Priya  Julia
-NULL     Ketty      NULL   Maria 
+NULL     Ketty      NULL   Maria
 ```           
 **Explanation**
 
