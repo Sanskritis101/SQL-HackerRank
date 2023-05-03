@@ -15,7 +15,7 @@ The TRIANGLES table is described as follows:
 
 Each row in the table denotes the lengths of each of a triangle's three sides.
 
-Solution:
+***Solution:***
 ```MySQL
 SELECT CASE
 WHEN A+B<=C OR B+C<=A OR A+C<=B THEN "Not A Triangle"
