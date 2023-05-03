@@ -62,4 +62,19 @@ Note: Salary is per month.
 SELECT CEIL(AVG(SALARY)-AVG(REPLACE(SALARY,'0',''))+1) FROM EMPLOYEES;
 ```
 
+###[The Count Function](www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem)
+Query a count of the number of cities in CITY having a Population larger than .
+
+Input Format
+
+The CITY table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235898195-5d748aa6-73d7-49e8-8796-bbd0f4a86c5c.png)
+
+**Solution**
+```MySQL
+SELECT COUNT(NAME) FROM CITY WHERE POPULATION>100000;
+```
+
+
 
