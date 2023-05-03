@@ -63,7 +63,7 @@ SELECT CEIL(AVG(SALARY)-AVG(REPLACE(SALARY,'0',''))+1) FROM EMPLOYEES;
 ```
 
 ### [The Count Function](www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem)
-Query a count of the number of cities in CITY having a Population larger than .
+Query a count of the number of cities in CITY having a Population larger than 100,000.
 
 Input Format
 
