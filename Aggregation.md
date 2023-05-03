@@ -23,7 +23,7 @@ The CITY table is described as follows:
 
 **Solution:**
 ```MySQL
-SELECT SUM(population) FROM CITY WHERE COUNTRYCODE = "JPN";
+SELECT SUM(population) FROM CITY WHERE COUNTRYCODE='JPN';
 ```
 
 ### [Population Density Difference](https://www.hackerrank.com/challenges/population-density-difference/problem)
