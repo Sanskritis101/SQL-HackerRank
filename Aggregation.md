@@ -62,7 +62,7 @@ Note: Salary is per month.
 SELECT CEIL(AVG(SALARY)-AVG(REPLACE(SALARY,'0',''))+1) FROM EMPLOYEES;
 ```
 
-### [The Count Function](www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem)
+### [Revising Aggregations- The Count Function](www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem)
 Query a count of the number of cities in CITY having a Population larger than 100,000.
 
 Input Format
@@ -71,10 +71,73 @@ The CITY table is described as follows:
 
 ![image](https://user-images.githubusercontent.com/104347305/235898195-5d748aa6-73d7-49e8-8796-bbd0f4a86c5c.png)
 
-**Solution**
+**Solution:**
 ```MySQL
 SELECT COUNT(NAME) FROM CITY WHERE POPULATION>100000;
 ```
 
+### [Revising Aggregations- The Sum Function](www.hackerrank.com/challenges/revising-aggregations-the-sum-function/problem)
+Query the total population of all cities in CITY where District is California.
+
+Input Format
+
+The CITY table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235898921-91705a94-c2af-4b1b-b101-b35f0cec6236.png)
+
+**Solution:**
+```MySQL
+SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT='California';
+```
+
+### [Revising Aggregations- The Average Function](www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem)
+Query the average population of all cities in CITY where District is California.
+
+Input Format
+
+The CITY table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235899277-dad1caa2-e30b-447f-86ce-f3b33475d04d.png)
+
+**Solution:**
+```MySQL
+SELECT AVG(POPULATION) FROM CITY WHERE DISTRICT='California';
+```
+
+### [Top Earners](www.hackerrank.com/challenges/earnings-of-employees/problem)
+We define an employee's total earnings to be their monthly *salary*x*months* worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as 2 space-separated integers.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235899867-da197edf-71e8-4ecc-9117-6c27f0e1599b.png)
+
+where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is the their monthly salary.
+
+**Solution:**
+```MySQL
+SELECT MAX(salary*months), COUNT(*) FROM EMPLOYEE WHERE (salary*months)>=(SELECT(MAX(months*salary)) FROM EMPLOYEE);
+```
+
+### [Weather Observation Status 2](www.hackerrank.com/challenges/weather-observation-station-2/problem)
+Query the following two values from the STATION table:
+
+The sum of all values in LAT_N rounded to a scale of  decimal places.
+The sum of all values in LONG_W rounded to a scale of  decimal places.
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235901946-e81168db-22a9-42e3-84a4-d72338ef141f.png)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+Output Format
+
+Your results must be in the form:
+``` lat lon ```
+
+where *lat* is the sum of all values in LAT_N and *lon* is the sum of all values in LONG_W. Both results must be rounded to a scale of  decimal places.
 
 
