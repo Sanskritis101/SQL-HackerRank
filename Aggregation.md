@@ -57,4 +57,9 @@ Note: Salary is per month.
 **Constraints**
 ```  1000 < Salary <10⁵  ```
 
+**Solution:**
+```MySQL
+SELECT CEIL(AVG(SALARY)-AVG(REPLACE(SALARY,'0',''))+1) FROM EMPLOYEES;
+```
+
 
