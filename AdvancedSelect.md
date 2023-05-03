@@ -6,7 +6,7 @@ Write a query identifying the type of each record in the TRIANGLES table using i
 - Scalene: It's a triangle with  sides of differing lengths.                             
 - Not A Triangle: The given values of A, B, and C don't form a triangle.                       
 
-**Input Format   **                  
+**Input Format**                   
 The TRIANGLES table is described as follows:
 
 ![image](https://user-images.githubusercontent.com/104347305/235743862-961af14c-479f-4ebd-9bd8-aabdfd26d812.png)
