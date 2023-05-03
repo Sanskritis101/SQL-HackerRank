@@ -59,5 +59,45 @@ There are a total of 3 professors.
 
 ***Solution:***
 ```MySQL
+SELECT (NAME|| '('|| SUBSTR(OCCUPATION,1,1) || ')' ) FROM OCCUPATIONS ORDER BY NAME;
+SELECT ('There are a total of '|| COUNT(OCCUPATION)||' '|| LOWER(OCCUPATION)||'s.') FROM OCCUPATIONS GROUP BY OCCUPATIONS ORDER BY COUNT(OCCUPATION), OCCUPATION ASC;
+```                               
+
+### [Occupations](https://www.hackerrank.com/challenges/occupations/problem)
+Pivot the Occupation column in OCCUPATIONS so that each Name is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be Doctor, Professor, Singer, and Actor, respectively.
+
+Note: Print NULL when there are no more names corresponding to an occupation.
+
+**Input Format**
+
+The OCCUPATIONS table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/235819352-a79f3fbe-2c03-47d2-99fb-66d5563169d0.png)
+
+Occupation will only contain one of the following values: Doctor, Professor, Singer or Actor.
+
+Sample Input
+
+![image](https://user-images.githubusercontent.com/104347305/235819366-bc163405-7f92-4230-bdb5-fbdf6c94e719.png)
+
+
+Sample Output
+
+``` Jenny    Ashley     Meera  Jane
+Samantha Christeen  Priya  Julia
+NULL     Ketty      NULL   Maria 
+```           
+**Explanation**
+
+The first column is an alphabetically ordered list of Doctor names.
+The second column is an alphabetically ordered list of Professor names.
+The third column is an alphabetically ordered list of Singer names.
+The fourth column is an alphabetically ordered list of Actor names.
+The empty cell data for columns with less than the maximum number of names per occupation (in this case, the Professor and Actor columns) are filled with **NULL** values.
+
+***Solution***
+```MySQL
+
 ```
+
 
