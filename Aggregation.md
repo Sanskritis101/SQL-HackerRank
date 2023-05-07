@@ -193,3 +193,19 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 ```MySQL
 SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N<137.2345);
 ```
+
+### [Weather Observation Station-16](www.hackerrank.com/challenges/weather-observation-station-16/problem)
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than . Round your answer to  decimal places.
+
+**Input Format**
+
+The STATION table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/236664611-b0fbdccf-3999-4de5-b90d-b587b4180754.png)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution:**
+```MySQL
+SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N<137.2345);
+```
