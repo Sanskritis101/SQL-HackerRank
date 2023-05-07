@@ -207,5 +207,5 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution:**
 ```MySQL
-SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N<137.2345);
+SELECT ROUND(MIN(LAT_N),4) FROM STATION WHERE LAT_N>38.7780;
 ```
