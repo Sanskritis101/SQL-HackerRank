@@ -65,7 +65,7 @@ SELECT CEIL(AVG(SALARY)-AVG(REPLACE(SALARY,'0',''))+1) FROM EMPLOYEES;
 ### [Revising Aggregations- The Count Function](www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem)
 Query a count of the number of cities in CITY having a Population larger than 100,000.
 
-Input Format
+**Input Format**
 
 The CITY table is described as follows:
 
@@ -79,7 +79,7 @@ SELECT COUNT(NAME) FROM CITY WHERE POPULATION>100000;
 ### [Revising Aggregations- The Sum Function](www.hackerrank.com/challenges/revising-aggregations-the-sum-function/problem)
 Query the total population of all cities in CITY where District is California.
 
-Input Format
+**Input Format**
 
 The CITY table is described as follows:
 
@@ -93,7 +93,7 @@ SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT='California';
 ### [Revising Aggregations- The Average Function](www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem)
 Query the average population of all cities in CITY where District is California.
 
-Input Format
+**Input Format**
 
 The CITY table is described as follows:
 
@@ -107,7 +107,7 @@ SELECT AVG(POPULATION) FROM CITY WHERE DISTRICT='California';
 ### [Top Earners](www.hackerrank.com/challenges/earnings-of-employees/problem)
 We define an employee's total earnings to be their monthly *salary*x*months* worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as 2 space-separated integers.
 
-Input Format
+**Input Format**
 
 The Employee table containing employee data for a company is described as follows:
 
@@ -127,6 +127,7 @@ The sum of all values in LAT_N rounded to a scale of  decimal places.
 The sum of all values in LONG_W rounded to a scale of  decimal places.
 
 **Input Format**
+
 The STATION table is described as follows:
 
 ![image](https://user-images.githubusercontent.com/104347305/235901946-e81168db-22a9-42e3-84a4-d72338ef141f.png)
@@ -149,6 +150,7 @@ SELECT ROUND(SUM(LAT_N),2), ROUND(SUM(LONG_W),2) FROM STATION;
 Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 38.7880 and less than 137.2345. Truncate your answer to 4 decimal places.
 
 **Input Format**
+
 The STATION table is described as follows:
 
 ![image](https://user-images.githubusercontent.com/104347305/236663891-d6e78762-baf4-4d7a-a819-cd994e14c07e.png)
@@ -160,5 +162,18 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT ROUND(SUM(LAT_N), 4) FROM STATION WHERE LAT_N>38.7880 AND LAT_N<137.2345;
 ```
 
+### [Weather Observation Station-14](https://www.hackerrank.com/challenges/weather-observation-station-14/problem)
+Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to  decimal places.
 
+**Input Format**
 
+The STATION table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/236664132-18dc3e6b-60c9-4405-b94c-dd7648d953b7.png)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution:**
+```MySQL
+SELECT ROUND(MAX(LAT_N),4) FROM STATION WHERE LAT_N<137.2345
+```
