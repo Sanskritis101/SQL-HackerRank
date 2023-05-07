@@ -225,3 +225,25 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 ```MySQL
 SELECT ROUND(LONG_W, 4) FROM STATION WHERE LAT_N = (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N>38.7780);
 ```
+
+### [Weather Observation Station-18](www.hackerrank.com/challenges/weather-observation-station-18/problem)
+Consider P1(a,b) and P2(c,d) to be two points on a 2D plane.
+
+- happens to equal the minimum value in Northern Latitude (LAT_N in STATION).
+- happens to equal the minimum value in Western Longitude (LONG_W in STATION).
+- happens to equal the maximum value in Northern Latitude (LAT_N in STATION).
+- happens to equal the maximum value in Western Longitude (LONG_W in STATION).
+Query the Manhattan Distance between points P1 and P2 and round it to a scale of 4 decimal places.
+
+**Input Format**
+
+The STATION table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/236664611-b0fbdccf-3999-4de5-b90d-b587b4180754.png)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution:**
+```MySQL
+
+```
