@@ -163,7 +163,7 @@ SELECT ROUND(SUM(LAT_N), 4) FROM STATION WHERE LAT_N>38.7880 AND LAT_N<137.2345;
 ```
 
 ### [Weather Observation Station-14](https://www.hackerrank.com/challenges/weather-observation-station-14/problem)
-Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to  decimal places.
+Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to 4 decimal places.
 
 **Input Format**
 
@@ -175,5 +175,21 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution:**
 ```MySQL
-SELECT ROUND(MAX(LAT_N),4) FROM STATION WHERE LAT_N<137.2345
+SELECT ROUND(MAX(LAT_N),4) FROM STATION WHERE LAT_N<137.2345;
+```
+
+### [Weather Observation Station-15](www.hackerrank.com/challenges/weather-observation-station-15/problem)
+Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+
+**Input Format**
+
+The STATION table is described as follows:
+
+![image](https://user-images.githubusercontent.com/104347305/236664611-b0fbdccf-3999-4de5-b90d-b587b4180754.png)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution:**
+```MySQL
+SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N<137.2345);
 ```
